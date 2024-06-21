@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navContainer{
+    padding: 10px;
+    background-color: aquamarine;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu li{
+    padding: 0px 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbutton{
+    margin-left: 180px;
+    padding: 5px;
+    display: none;
+    border: 2px solid whitesmoke;
+}
+#check{
+    display: none;
+}
+
+
+@media (max-width:576px) {
+    .menu{
+        position: absolute;
+        flex-direction: column;
+        top:20px;
+        width: 70%;
+        margin-left:10px;
+        padding-top:10px;
+        padding-bottom: 10px;
+        display: none;
+        margin-top: 30px;
+        background-color: teal;
+    }
+.menu li{
+    height: 50px;
+    background-color:tomato;
+    color: white;
+    font-size: large;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+    .checkbutton{
+        display:block;
+    }
+
+    
+    #check:checked~.menu{
+        display: flex;
+    }
+
+    #check:checked~ button{
+        display: flex;
+    }
+    
+}
